@@ -1,5 +1,6 @@
 .footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 3rem;
     padding-bottom: 1rem;
     gap: 5rem;
@@ -15,7 +16,7 @@
 /* FooterAboutUS */
 
 .footerAboutUs {
-    width: 40%;
+    text-align: center;
 }
 
 .footerAboutUs-content {
@@ -27,7 +28,6 @@
 
 /* FooterKnowMore */
 .footerKnowMore {
-    width: 30%;
     text-align: center;
 }
 
@@ -45,9 +45,6 @@
 
 
 /* FooterContactUs */
-.footerContactUs {
-    width: 30%;
-}
 
 .footerContactUs-address {
     margin-bottom: 1rem;
@@ -127,4 +124,21 @@
     font-size: xx-large;
     background-color: var(--color-green);
     padding: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footerContactUs {
+        text-align: center;
+    }
 }

@@ -1,0 +1,70 @@
+/* Service_page */
+
+.services-heading {
+    text-align: center;
+    padding-top: 6rem;
+    font-family: 'Prata', serif;
+    padding-bottom: 2rem;
+    color: var(--color-green);
+    font-size: x-large;
+}
+
+.service {
+    background: rgb(152, 78, 0);
+    background: linear-gradient(90deg, rgba(152, 78, 0, 1) 0%, rgba(151, 77, 0, 1) 26%, rgba(74, 0, 0, 1) 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 3rem;
+}
+
+/* Service-Box */
+
+.servicesBox {
+    background-color: var(--color-primary);
+    margin: 2rem;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.servicesBox-title {
+    margin: 1rem;
+    font-family: 'Prata', serif;
+}
+
+.servicesBox hr {
+    width: 90%;
+    background-color: yellow;
+    height: 0.3rem;
+    border: none;
+    margin: 0 auto;
+}
+
+.servicesBox-des {
+    text-align: justify;
+    margin: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+.servicesBox-img img {
+    width: 80%;
+    margin: 1rem;
+}
+
+/* For tablet view */
+
+@media screen and (max-width: 1024px) {
+    .service {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For mobile view */
+
+@media screen and (max-width: 600px) {
+    .service {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

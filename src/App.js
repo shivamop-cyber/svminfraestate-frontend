@@ -1,9 +1,10 @@
-import React from 'react';
-import Nav from './components/navbar/Nav';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import routes from './routes';
+import React from "react";
+import Nav from "./components/navbar/Nav";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import routes from "./routes";
 
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from "framer-motion";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const location = useLocation();
@@ -21,9 +22,10 @@ const App = () => {
               exact
             />
           ))}
-          <Route path='*' element={<Navigate to='/' replace />} exact />
+          <Route path="*" element={<Navigate to="/" replace />} exact />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </>
   );
 };
